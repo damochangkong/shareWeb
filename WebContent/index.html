@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>蜘蛛笔记|工作必备的笔记应用</title>
+<meta name="description" content="蜘蛛笔记是一款免费笔记应用，帮助团队成员高效协作。" />
+<meta name="keywords"
+	content="蜘蛛笔记,云笔记，xmind，思维导图,团队协作，笔记应用,有道笔记,为知笔记,写博客工具，工作日志软件，读书笔记，网络日记本，在线文档编辑，蜘蛛笔记网页版" />
+<link rel="bookmark"  type="image/x-icon"  href="images/page1/favicon.ico"/>
+<link rel="shortcut icon" href="images/page1/favicon.ico">
+<link rel="icon" href="images/page1/favicon.ico">
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link href='http://cdn.webfont.youziku.com/webfonts/nomal/25920/46761/5770cefbf629d80e2c25c605.css' rel='stylesheet' type='text/css' />
+<style>
+body{
+	font-family:'msyhl435d1cfa56540';
+}
+</style>
+<link rel="stylesheet" type="text/css" media="screen and (max-width:1700px)" href="css/tinyScreen.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width:1701px)" href="css/bigScreen.css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/typed.min.js"></script>
+<script src="js/auais.page2.js"></script>
+<script>
+$(function() {
+	
+	$('#dowebok').fullpage({
+		sectionsColor : [ '#1bbc9b', '#f1ebed', '#6fb6d8', '#f1ebed' ],
+		anchors: ['section1', 'section2', 'section3', 'section4'],
+		menu: '#anchors',
+		'navigation': true,
+		afterLoad : function(anchorLink, index) {
+			if (index == '1') {
+			}
+			if (index == '2') {
+				//开始
+				$(".section2Div2").click();
+			}
+			if (index == '3') {
+				//开始
+				page2Handler.beginAction();
+			}
+			if (index == '4') {
+				//开始
+				$(".section4DivTip1").find(".section4DivTip11").delay(2 * coefficient).animate({width:'100%'}, 2 * coefficient);
+				$(".section4DivTip1").find(".section4DivTip12").delay(4 * coefficient).animate({width:'61%'}, 2 * coefficient);
+				$(".section4DivTip1").find(".section4DivTip13").delay(6 * coefficient).animate({width:'57%'}, 2 * coefficient);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '1'){
+			}
+			if(index == '2'){
+				//结束
+				page1Handler.showDeveloper(false);
+			}
+			if (index == '3') {
+				//重置页面
+				page2Handler.restart();
+			}
+			if (index == '4') {
+				//开始
+			}
+		}
+	});
+	
+	(function(){
+		page1Handler.bindClickEvent();
+	})();
+	
+	(function(){
+		$(".section4Div2").click(function(){
+			$(this).find("img").attr('src', 'images/page4/picButtonLight.png');
+			$(".section4Div3").find("img").attr('src', 'images/page4/soundButtonGrep.png');
+			$(".section4DivTip1").show();
+			$(".section4DivTip1").find(".section4DivTip11").delay(2 * coefficient).animate({width:'100%'}, 2 * coefficient);
+			$(".section4DivTip1").find(".section4DivTip12").delay(4 * coefficient).animate({width:'61%'}, 2 * coefficient);
+			$(".section4DivTip1").find(".section4DivTip13").delay(6 * coefficient).animate({width:'57%'}, 2 * coefficient);
+			$(".section4DivPhoneCon").find("img").attr('src', 'images/page4/pictureBg.png');
+			$(".section4DivTip2").hide().css({width:'0%',height:'0%'});
+		});
+		$(".section4Div3").click(function(){
+			$(this).find("img").attr('src', 'images/page4/soundButtonLight.png');
+			$(".section4Div2").find("img").attr('src', 'images/page4/picButtonGrep.png');
+			$(".section4DivTip2").show().delay(2 * coefficient).animate({width:'11%',height:'21.4%'}, 2 * coefficient);
+			$(".section4DivPhoneCon").find("img").attr('src', 'images/page4/soundBg.png');
+			$(".section4DivTip1").hide();
+			$(".section4DivTip1").find("div").width("0%");
+		});
+		$(".topDivApp1").hover(function(){
+			$(this).find("img").attr('src', 'images/page1/android2.png');
+		},function(){
+			$(this).find("img").attr('src', 'images/page1/android1.png');
+		});
+		$(".topDivApp2").hover(function(){
+			$(this).find("img").attr('src', 'images/page1/app2.png');
+		},function(){
+			$(this).find("img").attr('src', 'images/page1/app1.png');
+		});
+	})();
+});
+</script>
+</head>
+<body>
+	<div class="top">
+		<div class="topDiv1">
+			<div class="topDiv1LogoFront"><img src="images/page1/logoFront.png" /></div>
+			<div class="topDiv1Logo"><a data-menuanchor="section1" href="#section1"><img src="images/page1/logo.png" /></a></div>
+		</div>
+		<div class="topDiv2">
+			<div class="topDiv2weibo"><img src="images/page1/weibo.png" /></div>
+			<div class="topDiv2weixin"><img src="images/page1/weixin.png" /></div>
+		</div>
+	</div>
+	<div id="dowebok">
+		<div class="section section1">
+			<div class="section1DivPhone">
+				<img src="images/page1/iPhone6Gold.png"/>
+				<div class="section1DivPhoneCon">
+					<img class="section1DivPhoneConImg" src="images/page3/shouye.png"/>
+				</div>
+			</div>
+			<div class="section1DivTitle"><span>有思想的随身笔记</span></div>
+			<div class="section1DivDesc"><span>织一张思维网，连接知识、灵感、记忆</span></div>
+			<div class="section1DivAppPhone">
+				<div class="topDivApp topDivApp1"><img src="images/page1/android1.png" /></div>
+				<div class="topDivApp topDivApp2"><img src="images/page1/app1.png" /></div>
+			</div>
+			<div class="section1DivTwoDimensional"><img src="images/page1/erweima.png"/></div>
+		</div>
+		<div class="section section2">
+			<div class="section2DivPhone">
+				<img src="images/page2/phoneBg.png"/>
+				<div class="section2DivPhoneCon">
+					<div class="section2DivConInput"><img src="images/page2/mind_input.png"/></div>
+					<img class="section2DivPhoneConImg" src="images/page2/commonBack.png"/>
+					<div class="section2DivConDetail1"><img src="images/page2/mind_detail.png"/></div>
+					<div class="section2DivConDetail2"><img src="images/page2/manager_detail2.png"/></div>
+					<div class="section2DivConTree section2DivConTree3"><img src="images/page2/mind_03.png"/></div>
+					<div class="section2DivConTree section2DivConTree2"><img src="images/page2/mind_02.png"/></div>
+					<div class="section2DivConTree section2DivConTree1"><img src="images/page2/mind_01.png"/></div>
+					<div class="section2DivMouse"><img src="images/shubiao.png"/></div>
+				</div>
+			</div>
+			<div class="section2Div2"><img src="images/page2/developerSelected.png"/></div>
+			<div class="section2Div2Tip"><img src="images/page2/developerTip.png"/></div>
+			<div class="section2Div3"><img src="images/page2/manager.png"/></div>
+			<div class="section2Div3Tip"><img src="images/page2/managerTip.png"/></div>
+			<div class="section2Div4Title"><span>想到哪，记到哪</span></div>
+			<div class="section2Div5Desc"><span>适应于移动场景的脑图结构和你的大脑保持同步</span></div>
+			<div class="section2Div6Circle"><img src="images/page2/circleBg.png"/></div>
+		</div>
+		<div class="section section3">
+			<div id="Layer1">
+				<img src="images/page3/phoneBg.png"/>
+				<div id="Layer2Con">
+					<img src="images/page3/shouye.png"/>
+					<div id="LayerWordPieceLong"><img src="images/page3/wordPieceLong.png"/></div>
+					<div id="LayerWordPiece"><img src="images/page3/wordPiece.png"/></div>
+					<div id="LayerKaiGuan"><img src="images/page3/guan1.png"/></div>
+					<div id="LayerInputDetail"></div>
+					
+					<div id="LayerType" class="LayerContent"><img src="images/page3/leixing.png"/></div>
+					<div id="LayerInput" class="LayerContent"><img src="images/page3/wenzishuru.png"/></div>
+					<div id="LayerSummary" class="LayerContent"><img src="images/page3/peiceBox.png"/></div>
+					<div id="LayerDetail" class="LayerContent"><img src="images/page3/finished.png"/></div>
+					<div id="LayerMouse">
+						<img src="images/shubiao.png"/>
+					</div>
+				</div>
+			</div>
+			<div class="section3Div4Title"><span>先记录，再整理</span></div>
+			<div class="section3Div5Desc"><span>随手记下你的灵感和思绪有时间了再做整理</span></div>
+			<div class="section3Div6Circle"><img src="images/page3/circleBg.png"/></div>
+		</div>
+		<div class="section section4">
+			<div class="section4DivTip section4DivTip1">
+				<div class="section4DivTip11"><img src="images/page4/wordBar.png"/></div>
+				<div class="section4DivTip12"><img src="images/page4/picBar.png"/></div>
+				<div class="section4DivTip13"><img src="images/page4/soundBar.png"/></div>
+			</div>
+			<div class="section4DivTip2">
+				<img src="images/page4/glasses.png"/>
+			</div>
+			<div class="section4DivPhone">
+				<img src="images/page4/phoneBg.png"/>
+				<div class="section4DivPhoneCon">
+					<img class="section2DivPhoneConImg" src="images/page4/pictureBg.png"/>
+				</div>
+			</div>
+			<div class="section4Div2"><img src="images/page4/picButtonLight.png"/></div>
+			<div class="section4Div3"><img src="images/page4/soundButtonGrep.png"/></div>
+			<div class="section4Div4Title"><span>给图片、录音加标记</span></div>
+			<div class="section4Div5Desc"><span>图片打上标签，记住更多细节<br/>录音加上时间戳，定位关键内容</span></div>
+			<div class="section4Div6Circle"><img src="images/page4/circleBg.png"/></div>
+		</div>
+	</div>
+</body>
+</html>
